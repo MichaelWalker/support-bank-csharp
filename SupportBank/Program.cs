@@ -7,7 +7,11 @@ namespace SupportBank
         static void Main(string[] args)
         {
             var reader = new TransactionReader();
-            Console.WriteLine(reader.readTransactions());
+
+            foreach (var transaction in reader.ReadTransactions())
+            {
+                Console.WriteLine(transaction);
+            }
         }
     }
 }
