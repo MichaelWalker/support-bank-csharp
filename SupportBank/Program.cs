@@ -6,7 +6,8 @@ namespace SupportBank
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var reader = new TransactionReader();
+            Console.WriteLine(reader.readTransactions());
         }
     }
 }
