@@ -10,7 +10,7 @@ namespace SupportBank
     {
         private const string FilePath = "Data/Transactions2014.csv";
         
-        public List<Transaction> ReadTransactions()
+        public static List<Transaction> ReadTransactions()
         {
             var transactions = new List<Transaction>();
             foreach (var line in ReadAllLinesFromFile())

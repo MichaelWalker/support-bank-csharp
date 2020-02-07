@@ -6,13 +6,10 @@ namespace SupportBank
     {
         static void Main(string[] args)
         {
-            var reader = new TransactionReader();
-            var bank = new Bank();
+            var transactions = TransactionReader.ReadTransactions();
+            var accounts = Bank.ProcessTransactions(transactions);
 
-            var transactions = reader.ReadTransactions();
-            var accounts = bank.ProcessTransactions(transactions);
-
-            Console.WriteLine(accounts);
+            AccountPrinter.PrintAllAccounts(accounts);
         }
     }
 }

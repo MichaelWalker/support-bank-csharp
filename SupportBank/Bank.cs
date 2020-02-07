@@ -6,7 +6,7 @@ namespace SupportBank
 {
     public class Bank
     {
-        public IEnumerable<Account> ProcessTransactions(IEnumerable<Transaction> transactions)
+        public static IEnumerable<Account> ProcessTransactions(IEnumerable<Transaction> transactions)
         {
             var transactionList = transactions.ToList();
             var accounts = CreateAccounts(transactionList);
